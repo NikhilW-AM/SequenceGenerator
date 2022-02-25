@@ -1,0 +1,14 @@
+<div class="container my-5 text-center">
+  <h2 class="text-center">Hello and welcome,</h2>
+  <input
+    type="text"
+    #userName
+    placeholder="Please enter your name"
+    class="form-control form-control-lg w-50 mx-auto mt-5"
+  />
+  <div class="my-5">
+    <a class="btn btn-primary btn-lg" (click)="getUserName(userName.value)"
+      >Continue</a
+    >
+  </div>
+</div>

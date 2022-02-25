@@ -1,0 +1,22 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <div class="card" *ngIf="shape && displayCount">
+        <div class="card-body" id="eight_circle">
+          <div class="row py-4">
+            <div class="col-auto mb-3" *ngFor="let num of arr">
+              <h4
+                class="border border-info px-4 py-3 m-auto"
+                [ngClass]="
+                  shape === 'Circle' ? 'rounded rounded-circle' : 'rounded'
+                "
+              >
+                <span>{{ num }}</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

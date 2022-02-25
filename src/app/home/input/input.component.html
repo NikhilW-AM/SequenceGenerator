@@ -1,0 +1,46 @@
+<div class="container my-5">
+  <div class="card my-5 col-md-6 mx-auto">
+    <div class="card-body p-4">
+      <form [formGroup]="inputForm" novalidate (submit)="sendNumber()">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <input
+                type="number"
+                id="N"
+                #num
+                placeholder="How many numbers?"
+                class="form-control form-control-lg"
+                formControlName="count"
+                name="count"
+              />
+            </div>
+          </div>
+          <div class="col-12 my-3">
+            <div class="form-group">
+              <select
+                class="form-control form-control-lg"
+                #display
+                formControlName="shape"
+                name="shape"
+              >
+                <option value="">Select Display Option</option>
+                <option value="Circle">Circle</option>
+                <option value="Square">Square</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12">
+            <button
+              type="submit"
+              [disabled]="inputForm.invalid"
+              class="btn btn-outline-primary btn-lg me-2"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
